@@ -7,6 +7,6 @@ http://stackoverflow.com/questions/17373886/how-can-i-get-a-users-media-from-ins
 ## Usage
 
 ```PHP
-$media = new Iksi\InstagramMedia('iksi');
+$media = new Iksi\InstagramMedia('username');
 $media->feed();
 ```
