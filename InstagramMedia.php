@@ -27,10 +27,14 @@ class InstagramMedia {
     if(!empty($this->query)) {
       $url = "{$url}?{$this->query}";
     }
-
-    curl_setopt($handle, CURLOPT_URL, $url);
-    curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($handle, CURLOPT_HEADER, false);
+    
+    curl_setopt_array($handle, array(
+      CURLOPT_URL            => $url,
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_IPRESOLVE      => CURL_IPRESOLVE_V4,
+      CURLOPT_USERAGENT      => $_SERVER['HTTP_USER_AGENT'],
+      CURLOPT_HEADER         => false
+    ));
 
     $response = curl_exec($handle);
     $httpcode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
