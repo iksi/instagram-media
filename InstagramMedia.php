@@ -10,7 +10,7 @@ namespace Iksi;
 
 class InstagramMedia {
 
-  public $feed = 'https://www.instagram.com/%s/media/';
+  public $feed = 'https://www.instagram.com/%s/?__a=1';
   public $username;
   public $query;
 
@@ -27,7 +27,7 @@ class InstagramMedia {
     if(!empty($this->query)) {
       $url = "{$url}?{$this->query}";
     }
-    
+
     curl_setopt_array($handle, array(
       CURLOPT_URL            => $url,
       CURLOPT_RETURNTRANSFER => true,
