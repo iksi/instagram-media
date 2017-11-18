@@ -1,8 +1,6 @@
 # InstagramMedia
 
-Class to fetch Instagram media feeds.
-
-http://stackoverflow.com/questions/17373886/how-can-i-get-a-users-media-from-instagram-without-authenticating-as-a-user/33783840#33783840
+Class to fetch Instagram media feeds. Makes use of a public url like https://www.instagram.com/iksi/?__a=1.
 
 ## Usage
 
